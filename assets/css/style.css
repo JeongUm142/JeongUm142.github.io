@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #555A6B;
 }
 
 a {
@@ -453,7 +453,7 @@ section {
   font-weight: 500;
   padding: 0;
   line-height: 1px;
-  margin: 0 0 5px 0;
+  margin: 0 0 6px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
@@ -468,15 +468,12 @@ section {
   margin: 4px 10px;
 }
 .section-title p {
-  margin: 0;
-  margin: 0;
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #151515;
 }
-
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -489,9 +486,10 @@ section {
   list-style: none;
   padding: 0;
 }
-.about .content ul li {
+.about .content ul li{
   padding: 0 0 8px 26px;
   position: relative;
+   margin-bottom: 10px;
 }
 .about .content ul i {
   position: absolute;
@@ -500,10 +498,15 @@ section {
   top: -3px;
   color: #ffc451;
 }
-.about .content p:last-child {
-  margin-bottom: 0;
+.about .content p{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0px;
 }
-
+.about .single-about-img{
+  margin: -30px 0 0 0px;
+  width: 300px;
+}
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
@@ -569,14 +572,16 @@ section {
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
+  width: 300px;
   text-align: center;
   border: 1px solid #ebebeb;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
+  margin-bottom: 30px;
 }
 .services .icon-box .icon {
-  margin: 0 auto;
+  margin: 10px auto;
   width: 64px;
   height: 64px;
   background: #ffc451;
@@ -651,24 +656,26 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-.project-wrap {
-	border : 1px solid orange;
-	width: 650px;
-	height: 1200px;
-}
-.portfolio .project-wrap:first-child {
-    margin-right: 10px;
+.portfolio .flex {
+	display: flex;
 }
 .portfolio-wrap img {
-	padding-top: 10px;
-	height: 500px;
+	width: 630px;
+	height: 380px;
 }
-.portfolio-btn-All {
+.portfolio-btn-All{
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+.portfolio-btn-All .btn{
+	color: white;
+}
+.portfolio-btn-All .btn:hover{
+	color: black;
+}
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  height: 730px;
 }
 .portfolio #portfolio-flters {
   padding: 0;
@@ -701,7 +708,8 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  margin-top: 10px;
+  margin: 70px 20px 45px 5px;
+  height: 380px;
 }
 .portfolio .portfolio-wrap::before {
   content: "";
@@ -731,12 +739,13 @@ section {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 20px;
+  padding: 10px;
 }
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
+  text-transform: uppercase;
 }
 .portfolio .portfolio-wrap .portfolio-info p {
   color: rgba(255, 255, 255, 0.7);
@@ -766,7 +775,12 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
 }
-
+/* 모바일 사이즈에서 플렉스 방향을 위아래로 변경 */
+@media (max-width: 768px) {
+  .portfolio .portfolio-wrap .portfolio-info {
+    flex-direction: column;
+  }
+}
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
